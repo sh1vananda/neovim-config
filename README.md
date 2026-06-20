@@ -10,6 +10,82 @@ This document contains an exhaustive list of controls for the LazyVim configurat
 *   **CR**: Enter/Return
 *   **Esc**: Escape
 
+## Core Workflow Keybindings
+
+This section outlines the actual daily-driver keybindings for building code. No nonsense, no fluff. Just the bindings you need to navigate, edit, and debug.
+
+### File Explorer & Sidebar Navigation (Neo-tree)
+*   `<leader>e`: Toggle file explorer sidebar.
+*   `j` / `k`: Move cursor down / up in the file tree.
+*   `Enter` or `l`: Open selected file or expand directory.
+*   `h`: Collapse directory.
+*   `a`: Add new file or directory (add a trailing `/` to create a directory).
+*   `r`: Rename file or directory.
+*   `d`: Delete file or directory.
+*   `x`: Cut file or directory.
+*   `y`: Copy file or directory.
+*   `p`: Paste cut or copied file/directory.
+*   `H` or `I`: Toggle visibility of hidden files (dotfiles).
+
+### File Management & Buffers
+*   `<leader><space>` or `<leader>ff`: Find file in project.
+*   `<leader>fr`: Find recently opened files.
+*   `<C-s>`: Save file manually.
+*   `<leader>bd`: Close current file (delete buffer).
+*   `H` (Shift+h): Switch to the previous open buffer (tab left).
+*   `L` (Shift+l): Switch to the next open buffer (tab right).
+*   `<leader>,` or `<leader>bb`: Open selection list for active buffers.
+*   `<leader>`` (backtick): Switch back to the last active buffer.
+*   `<leader>bp`: Pin current buffer to prevent automatic closing.
+
+### Multi-Window Splits & Navigation
+*   `<leader>|`: Split window vertically.
+*   `<leader>-`: Split window horizontally.
+*   `C-h`: Move cursor to the left split window.
+*   `C-j`: Move cursor to the bottom split window.
+*   `C-k`: Move cursor to the top split window.
+*   `C-l`: Move cursor to the right split window.
+*   `<leader>wd`: Close current split window.
+
+### Code Selection, Editing & Refactoring
+*   `<C-a>`: Select all code in the current file.
+*   `v`: Start visual character selection.
+*   `V`: Start visual line selection.
+*   `<C-v>`: Start visual block (column) selection.
+*   `<C-space>`: Expand visual selection incrementally (syntax-aware).
+*   `Backspace`: Shrink visual selection incrementally.
+*   `gcc`: Toggle comment on the current line.
+*   `gc{motion}`: Toggle comment on the targeted motion.
+*   `<leader>cf`: Auto-format current buffer.
+*   `<leader>cr`: Rename code symbol (variable, function, class) project-wide via LSP.
+*   `<leader>ca`: Trigger LSP code actions and quick-fixes.
+*   `gd`: Go to definition of symbol under cursor.
+*   `gr`: Go to references of symbol under cursor.
+*   `gI`: Go to implementation of symbol under cursor.
+*   `gy`: Go to type definition of symbol under cursor.
+*   `K`: Show documentation hover popup for symbol under cursor.
+
+### Search & Grep
+*   `<leader>sg`: Search for text string across all files in the project (grep).
+*   `<leader>sw`: Search for word under cursor across project.
+
+### Terminals & Command Run
+*   `C-/`: Toggle floating terminal window.
+*   `<leader>ft`: Open terminal split at the project root directory.
+*   `<leader>fT`: Open terminal split at the current file's directory.
+*   `Esc Esc`: Exit terminal insertion mode to normal mode (allows window navigation).
+*   `C-h` / `C-j` / `C-k` / `C-l`: Move cursor out of terminal split to code split (requires normal mode).
+*   `exit`: Terminate terminal shell session.
+*   `<leader>r`: Run current Python file interactively (python -i).
+*   `<leader>cv`: Select Python virtual environment (venv-selector).
+
+### Git & Code Diff
+*   `<leader>gg`: Open lazygit terminal client.
+*   `<leader>gd`: Open side-by-side git diff history (Diffview).
+*   `<leader>gc`: Close git diff history.
+
+Note: Automatic file saving is active in the background when leaving insert mode or stopping text input (auto-save.nvim).
+
 ---
 
 ## 1. Global Basics

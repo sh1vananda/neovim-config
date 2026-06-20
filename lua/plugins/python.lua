@@ -6,9 +6,6 @@ return {
     opts = {
       -- This finds venvs in standard locations + relative to project
       name = { "venv", ".venv", "env", ".env" },
-      -- specific for Windows Anaconda users:
-      anaconda_base_path = "C:\\Users\\YOUR_USERNAME\\anaconda3",
-      anaconda_envs_path = "C:\\Users\\YOUR_USERNAME\\anaconda3\\envs",
     },
     keys = {
       { "<leader>cv", "<cmd>VenvSelect<cr>", desc = "Select VirtualEnv" },
